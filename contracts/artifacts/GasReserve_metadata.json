@@ -11,6 +11,31 @@
 				"type": "constructor"
 			},
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "requester",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "GasRequested",
+				"type": "event"
+			},
+			{
 				"inputs": [],
 				"name": "admin",
 				"outputs": [
@@ -130,11 +155,11 @@
 	},
 	"sources": {
 		"contracts/gas_reserve.sol": {
-			"keccak256": "0x424939bfd399300f2ece5c154f87dd3c9f732894ced16837a9544fa9db6cb494",
+			"keccak256": "0xcdfaeab475e7e47d4af24039dd01c7e91f5d3b89f6344f4851cfec1206497a2d",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://303efdacc447a9f32cb652172b7f18936ba1e9c6481d3dae32566feba8f65014",
-				"dweb:/ipfs/QmSxjfc772zMhtW8vFWdPjeQC9YKYZXZYegYGuaiPGsgiL"
+				"bzz-raw://aee3a5551a697e22003874fb4e1059fe9858199834994f9f1da25cd8a0abeac3",
+				"dweb:/ipfs/QmZ3F1ZySqayJkXR2fgB2f32F9mK9qtH2wAqDhjxmBaceX"
 			]
 		}
 	},

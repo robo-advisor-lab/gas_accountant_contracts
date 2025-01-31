@@ -4,7 +4,10 @@ pragma solidity ^0.8.17;
 contract GasReserve {
     address public admin;
     mapping(address => bool) public authorizedContracts;
-    
+
+    // 📌 Event to log gas requests
+    event GasRequested(uint256 timestamp, address indexed requester, uint256 amount);
+
     constructor() {
         admin = msg.sender; // Deployer is admin
     }
@@ -32,6 +35,9 @@ contract GasReserve {
         require(address(this).balance >= _amount, "Not enough gas reserve");
 
         payable(msg.sender).transfer(_amount);
+
+        // 📌 Log the gas request
+        emit GasRequested(block.timestamp, msg.sender, _amount);
     }
 
     // 📌 Emergency withdraw (Admin only)
