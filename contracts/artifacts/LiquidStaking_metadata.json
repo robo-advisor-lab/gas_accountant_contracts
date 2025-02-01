@@ -769,11 +769,11 @@
 			]
 		},
 		"contracts/liquid_staking.sol": {
-			"keccak256": "0x7f7cfa97b1538ace4853bf5fa9798b2bbab861bfdaeca234abb9f7ae7ecbc85d",
+			"keccak256": "0x249297030cd2cffc49b1db14de094a89de75094928e73f05c34fe7b11a0a5c98",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://d4d3e9d644ac295cb8d8b105779de9defded38de346ccabdd6e2bc1035530d31",
-				"dweb:/ipfs/QmWaQ713gLYrBaZpAYVg52M6fKCFfbxpoPy2FX3RnewY6h"
+				"bzz-raw://22ba08ee5f7582e3c9059ad58e5a382c63d05f4e8d0174ab73073a2710e44b79",
+				"dweb:/ipfs/QmejiSy9CkPEH3jJ6dC38ykG2sAgiDL27i6nf1ubxrB18e"
 			]
 		}
 	},

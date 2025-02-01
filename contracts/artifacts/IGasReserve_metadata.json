@@ -95,11 +95,11 @@
 			]
 		},
 		"contracts/vault.sol": {
-			"keccak256": "0x75087970c8cc70f30fc633bc7e260e05dbd6389b6ccf15175f795a57e2562366",
+			"keccak256": "0xc8adff169373aadcd7b767a816ced188afea48bf1874139d4e01272425c55598",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://01034ac0c82f2a3b07f5eb552d7961a0e2d282144a9fac90027a75a95b6e9f4f",
-				"dweb:/ipfs/QmSLAPHy9pXFV4DkDq5r7FWsVSPCvtxB5mwTcoUnhttwMf"
+				"bzz-raw://38251b2988a31484e71cbe8d7612575ec0a6eee892b5921b9b245a57f3553c1e",
+				"dweb:/ipfs/QmXLXr2JvaHNyFhvMCkyWtY2XoFV5Cn9SqXuSrXAhwT5bS"
 			]
 		}
 	},

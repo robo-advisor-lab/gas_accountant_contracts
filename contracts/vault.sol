@@ -58,10 +58,10 @@ contract YieldVault is ERC20, Ownable {
         stETH.transfer(msg.sender, userShare); // Transfer stETH to user
     }
 
-    // 📌 Manual Harvest by Owner (Gas Reserve Pays) - NO time restriction
-    function harvest() external onlyOwner {
-        // Request gas from Gas Reserve before harvesting
-        gasReserve.requestGas(0.01 ether);
+    // 📌 Manual Harvest by Owner (Gas Reserve Pays) - Dynamically Requesting Gas
+    function harvest(uint256 gasAmount) external onlyOwner {
+        // Request gas from Gas Reserve (dynamically determined from Web3)
+        gasReserve.requestGas(gasAmount);
 
         // Claim rewards from Liquid Staking contract (which is also stETH)
         uint256 preBalance = stETH.balanceOf(address(this)); // Track balance before claim

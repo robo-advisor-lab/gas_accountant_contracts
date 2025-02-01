@@ -17,12 +17,13 @@ contract LiquidStaking is ERC20, Ownable {
         lastRewardTime = block.timestamp; // Initialize reward timer
     }
 
-    // 📌 Modifier: Auto-Update Rewards Before Any Action
     modifier updateReward(address account) {
-        rewardPerTokenStored = rewardPerToken();
-        lastRewardTime = block.timestamp;
+        rewardPerTokenStored = rewardPerToken(); // ✅ Ensure we use latest reward value
+        uint256 previousRewardTime = lastRewardTime; // ✅ Keep track of previous lastRewardTime
+        lastRewardTime = block.timestamp; // Update to current timestamp
 
         if (account != address(0)) {
+            // ✅ Store earned rewards BEFORE updating userRewardPerTokenPaid
             rewards[account] = earned(account);
             userRewardPerTokenPaid[account] = rewardPerTokenStored;
         }
@@ -45,16 +46,18 @@ contract LiquidStaking is ERC20, Ownable {
         payable(msg.sender).transfer(_amount);
     }
 
-    // 📌 View: Calculate Reward Per Token
     function rewardPerToken() public view returns (uint256) {
         if (totalSupply() == 0) {
             return rewardPerTokenStored;
         }
 
+        // ✅ Use old lastRewardTime BEFORE updating it in `updateReward`
         uint256 timeElapsed = block.timestamp - lastRewardTime;
         uint256 totalRewards = (totalSupply() * APY * timeElapsed) / (100 * SECONDS_IN_YEAR);
+
         return rewardPerTokenStored + (totalRewards * 1e18) / totalSupply();
     }
+
 
     // 📌 View: Get User's Earned Rewards
     function earned(address account) public view returns (uint256) {
