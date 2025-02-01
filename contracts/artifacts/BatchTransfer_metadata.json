@@ -1,0 +1,64 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address[]",
+						"name": "recipients",
+						"type": "address[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "amounts",
+						"type": "uint256[]"
+					}
+				],
+				"name": "batchSendETH",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/batch_transfer.sol": "BatchTransfer"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/batch_transfer.sol": {
+			"keccak256": "0x5736406d426b961a65182f03f236032a22044473e51fb610585e9503ab036c68",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f0eebb026218be8465787f16d190f5fd85f6b349bebd52b03eb65062d34f3713",
+				"dweb:/ipfs/QmRenTnEYAQL2v5FoW6ofNyQqhWq7ZnEKJhtaDASHEtPfP"
+			]
+		}
+	},
+	"version": 1
+}
